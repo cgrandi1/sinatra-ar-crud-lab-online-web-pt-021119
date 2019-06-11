@@ -47,7 +47,7 @@ class ApplicationController < Sinatra::Base
     @article.title = params[:title]
     @article.content = params[:content]
     @article.save
-    redirect '/edit'
+    eb :edit
   end
 
   delete '/articles/:id' do
