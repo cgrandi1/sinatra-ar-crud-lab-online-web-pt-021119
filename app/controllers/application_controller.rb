@@ -25,7 +25,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/articles' do
-    @articles = Article.all 
+    @articles = Article.all
     erb :index
   end
 
@@ -51,7 +51,7 @@ class ApplicationController < Sinatra::Base
 
   delete '/articles/:id' do
     @article = Article.find_by_id(params[:id])
-    @recipe.delete
+    @article.delete
     redirect to '/articles'
   end
 
